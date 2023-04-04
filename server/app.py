@@ -19,11 +19,6 @@ def home():
 def animal_by_id(id):
     animal = Animal.query.filter(Animal.id == id).first()
     
-    # if not animal:
-    #     response_body = '<h1>404 owner not found</h1>'
-    #     response = make_response(response_body, 404)
-    #     return response
-    
     response_body = f'''
     <h1>ID: {animal.id}</h1>
     <ul>Name: {animal.name}</ul>
